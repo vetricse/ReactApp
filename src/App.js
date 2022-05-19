@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes} from "react-router-dom";
 
 
 import './App.css';
+import DashBoard from "./Components/DashBoard";
 import EditProfile from "./Components/EditProfile";
 import Login from './Components/Login';
 import Register from "./Components/Register";
@@ -14,7 +15,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-       
+      <Route path="/"  element={<DashBoard/>}>
+         </Route>
+
         <Route path="/login"  element={<Login/>}>
          </Route>
 
