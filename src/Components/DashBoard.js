@@ -9,9 +9,11 @@ import MenuList from "@mui/material/MenuList";
 import Stack from "@mui/material/Stack";
 import Register from "./Register";
 import { Link } from "react-router-dom";
+import { PropaneSharp } from "@mui/icons-material";
 
 
 export default function DashBoard() {
+    
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
 
@@ -45,7 +47,7 @@ export default function DashBoard() {
 
     prevOpen.current = open;
   }, [open]);
-
+  if(PropaneSharp.isLoggedIn=="true"){
   return (
     <Stack direction="row" spacing={2}>
       <div>
@@ -97,4 +99,12 @@ export default function DashBoard() {
       </div>
     </Stack>
   );
+            }
+    else{
+        return(
+            <>
+            <p>Please Login or SignUp to Continue</p>
+            </>
+        )
+    }
 }

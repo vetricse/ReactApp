@@ -13,9 +13,10 @@ import ViewProfile from "./Components/ViewProfile";
 
 function App() {
   return (
+    
     <BrowserRouter>
       <Routes>
-      <Route path="/"  element={<DashBoard/>}>
+      <Route path="/"  element={<DashBoard isLoggedIn="false"/>}>
          </Route>
 
         <Route path="/login"  element={<Login/>}>
