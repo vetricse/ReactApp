@@ -7,6 +7,8 @@ import Popper from "@mui/material/Popper";
 import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
 import Stack from "@mui/material/Stack";
+import Register from "./Register";
+import { Link } from "react-router-dom";
 
 
 export default function DashBoard() {
@@ -81,11 +83,11 @@ export default function DashBoard() {
                     aria-labelledby="composition-button"
                     onKeyDown={handleListKeyDown}
                   >
-                    <MenuItem onClick={handleClose}>SignIn</MenuItem>
-                    <MenuItem onClick={handleClose}>Login</MenuItem>
-                    <MenuItem onClick={handleClose}>EditProfile</MenuItem>
-                    <MenuItem onClick={handleClose}>ViewPost</MenuItem>
-                    <MenuItem onClick={handleClose}>ViewProfile</MenuItem>
+                    <MenuItem onClick={handleClose}><Link to="/register">Register</Link> </MenuItem>
+                    <MenuItem onClick={handleClose}><Link to="/login">Login</Link></MenuItem>
+                    <MenuItem onClick={handleClose}><Link to="/editProfile">EditProfile</Link></MenuItem>
+                    <MenuItem onClick={handleClose}><Link to="/viewPost">ViewPost</Link></MenuItem>
+                    <MenuItem onClick={handleClose}><Link to="/viewProfile">ViewProfile</Link></MenuItem>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
